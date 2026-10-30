@@ -1,2 +1,29 @@
 # ComboBench
-Project page for ComboBench
+
+**Beyond Isolated Corruptions: Benchmarking 3D Robust Perception across Compositional Adversity Space**
+
+Chunmian Lin, Haobing Pang, Lei Yang, Xu Han, and Daxin Tian.
+
+ComboBench studies robust 3D perception under compositional camera–LiDAR corruptions. The project page introduces the configurable ComboGen pipeline, the CARE framework, corrupted observation examples, and experimental results on nuScenes-Combo and KITTI-Combo.
+
+## Project page
+
+[Visit the project page](https://buaa-linx.github.io/ComboBench/)
+
+## Resource status
+
+- Manuscript PDF: not publicly released yet.
+- Research code and data links: coming soon.
+- nuScenes and KITTI videos: reserved positions.
+
+## Website source
+
+The page is a static website. Its entry point is `index.html`; all assets use relative paths compatible with a GitHub Pages project site.
+
+Resource links, author URLs, publication metadata, and independent video file URLs are configured in `site-config.js`. Keep unavailable URLs as `null`.
+
+The complete data from manuscript Tables 7 and 8 is included in `assets/data/table7-table8.json`. Figure and data provenance is recorded in `SOURCE_NOTES.md`.
+
+## Third-party assets
+
+Icon sources and license notices are preserved in [assets/icons/SOURCES.md](assets/icons/SOURCES.md).

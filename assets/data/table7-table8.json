@@ -1,0 +1,785 @@
+{
+  "source": "Manuscript: Beyond Isolated Corruptions: Benchmarking 3D Robust Perception across Compositional Adversity Space",
+  "tables": {
+    "7": {
+      "table_number": 7,
+      "pdf_page": 12,
+      "dataset": "nuScenes-Combo",
+      "split": "validation",
+      "protocol": "Free-form composition",
+      "composition": [
+        "Fog",
+        "Echo Depletion",
+        "Occlusion"
+      ],
+      "row_headers": [
+        "Modality",
+        "Algorithm"
+      ],
+      "columns": [
+        {
+          "key": "map",
+          "label": "mAP",
+          "direction": "up"
+        },
+        {
+          "key": "nds",
+          "label": "NDS",
+          "direction": "up"
+        },
+        {
+          "key": "mrr",
+          "label": "mRR",
+          "direction": "up"
+        },
+        {
+          "key": "mce",
+          "label": "mCE",
+          "direction": "down"
+        },
+        {
+          "key": "car",
+          "label": "Car",
+          "direction": "up"
+        },
+        {
+          "key": "truck",
+          "label": "Truck",
+          "direction": "up"
+        },
+        {
+          "key": "bus",
+          "label": "Bus",
+          "direction": "up"
+        },
+        {
+          "key": "trailer",
+          "label": "Trailer",
+          "direction": "up"
+        },
+        {
+          "key": "cv",
+          "label": "C.V.",
+          "direction": "up"
+        },
+        {
+          "key": "ped",
+          "label": "Ped.",
+          "direction": "up"
+        },
+        {
+          "key": "motor",
+          "label": "Motor.",
+          "direction": "up"
+        },
+        {
+          "key": "bike",
+          "label": "Bike",
+          "direction": "up"
+        },
+        {
+          "key": "tc",
+          "label": "T.C.",
+          "direction": "up"
+        },
+        {
+          "key": "barrier",
+          "label": "Barrier",
+          "direction": "up"
+        }
+      ],
+      "rows": [
+        {
+          "modality": "Camera-based",
+          "method": "M-BEV",
+          "reference_number": 44,
+          "care_variant": false,
+          "values": [
+            "18.92",
+            "26.80",
+            "54.72",
+            "100.00",
+            "29.37",
+            "17.77",
+            "15.15",
+            "9.75",
+            "4.75",
+            "23.07",
+            "15.30",
+            "12.17",
+            "32.21",
+            "29.67"
+          ],
+          "metrics": {
+            "map": "18.92",
+            "nds": "26.80",
+            "mrr": "54.72",
+            "mce": "100.00",
+            "car": "29.37",
+            "truck": "17.77",
+            "bus": "15.15",
+            "trailer": "9.75",
+            "cv": "4.75",
+            "ped": "23.07",
+            "motor": "15.30",
+            "bike": "12.17",
+            "tc": "32.21",
+            "barrier": "29.67"
+          }
+        },
+        {
+          "modality": "Camera-based",
+          "method": "BEVFormer",
+          "reference_number": 22,
+          "care_variant": false,
+          "values": [
+            "23.47",
+            "38.65",
+            "74.76",
+            "83.81",
+            "46.01",
+            "22.66",
+            "21.14",
+            "5.46",
+            "2.69",
+            "31.21",
+            "17.87",
+            "16.00",
+            "39.82",
+            "31.86"
+          ],
+          "metrics": {
+            "map": "23.47",
+            "nds": "38.65",
+            "mrr": "74.76",
+            "mce": "83.81",
+            "car": "46.01",
+            "truck": "22.66",
+            "bus": "21.14",
+            "trailer": "5.46",
+            "cv": "2.69",
+            "ped": "31.21",
+            "motor": "17.87",
+            "bike": "16.00",
+            "tc": "39.82",
+            "barrier": "31.86"
+          }
+        },
+        {
+          "modality": "Camera-based",
+          "method": "BEVFormer-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "26.39",
+            "40.46",
+            "79.38",
+            "81.34",
+            "50.58",
+            "25.43",
+            "24.05",
+            "8.64",
+            "4.23",
+            "33.98",
+            "21.37",
+            "21.50",
+            "38.80",
+            "35.37"
+          ],
+          "metrics": {
+            "map": "26.39",
+            "nds": "40.46",
+            "mrr": "79.38",
+            "mce": "81.34",
+            "car": "50.58",
+            "truck": "25.43",
+            "bus": "24.05",
+            "trailer": "8.64",
+            "cv": "4.23",
+            "ped": "33.98",
+            "motor": "21.37",
+            "bike": "21.50",
+            "tc": "38.80",
+            "barrier": "35.37"
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "CenterPoint",
+          "reference_number": 45,
+          "care_variant": false,
+          "values": [
+            "57.45",
+            "65.54",
+            "98.11",
+            "100.00",
+            "84.46",
+            "57.54",
+            "70.24",
+            "36.66",
+            "15.59",
+            "83.17",
+            "52.16",
+            "39.94",
+            "68.14",
+            "66.58"
+          ],
+          "metrics": {
+            "map": "57.45",
+            "nds": "65.54",
+            "mrr": "98.11",
+            "mce": "100.00",
+            "car": "84.46",
+            "truck": "57.54",
+            "bus": "70.24",
+            "trailer": "36.66",
+            "cv": "15.59",
+            "ped": "83.17",
+            "motor": "52.16",
+            "bike": "39.94",
+            "tc": "68.14",
+            "barrier": "66.58"
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "LION",
+          "reference_number": 27,
+          "care_variant": false,
+          "values": [
+            "46.87",
+            "52.99",
+            "73.70",
+            "136.42",
+            "72.05",
+            "41.90",
+            "49.63",
+            "36.82",
+            "17.85",
+            "56.42",
+            "36.79",
+            "27.53",
+            "68.08",
+            "61.65"
+          ],
+          "metrics": {
+            "map": "46.87",
+            "nds": "52.99",
+            "mrr": "73.70",
+            "mce": "136.42",
+            "car": "72.05",
+            "truck": "41.90",
+            "bus": "49.63",
+            "trailer": "36.82",
+            "cv": "17.85",
+            "ped": "56.42",
+            "motor": "36.79",
+            "bike": "27.53",
+            "tc": "68.08",
+            "barrier": "61.65"
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "LION-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "56.36",
+            "60.65",
+            "99.20",
+            "114.19",
+            "80.58",
+            "55.11",
+            "66.77",
+            "41.66",
+            "24.57",
+            "67.84",
+            "53.93",
+            "42.34",
+            "69.45",
+            "61.39"
+          ],
+          "metrics": {
+            "map": "56.36",
+            "nds": "60.65",
+            "mrr": "99.20",
+            "mce": "114.19",
+            "car": "80.58",
+            "truck": "55.11",
+            "bus": "66.77",
+            "trailer": "41.66",
+            "cv": "24.57",
+            "ped": "67.84",
+            "motor": "53.93",
+            "bike": "42.34",
+            "tc": "69.45",
+            "barrier": "61.39"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "UniBEV",
+          "reference_number": 15,
+          "care_variant": false,
+          "values": [
+            "58.11",
+            "65.08",
+            "95.01",
+            "100.00",
+            "83.82",
+            "55.34",
+            "66.94",
+            "38.50",
+            "18.33",
+            "79.77",
+            "61.74",
+            "47.33",
+            "67.38",
+            "61.94"
+          ],
+          "metrics": {
+            "map": "58.11",
+            "nds": "65.08",
+            "mrr": "95.01",
+            "mce": "100.00",
+            "car": "83.82",
+            "truck": "55.34",
+            "bus": "66.94",
+            "trailer": "38.50",
+            "cv": "18.33",
+            "ped": "79.77",
+            "motor": "61.74",
+            "bike": "47.33",
+            "tc": "67.38",
+            "barrier": "61.94"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "MoME",
+          "reference_number": 16,
+          "care_variant": false,
+          "values": [
+            "57.31",
+            "66.17",
+            "89.90",
+            "96.88",
+            "80.59",
+            "56.03",
+            "68.73",
+            "37.32",
+            "21.87",
+            "78.33",
+            "60.22",
+            "45.35",
+            "65.34",
+            "59.28"
+          ],
+          "metrics": {
+            "map": "57.31",
+            "nds": "66.17",
+            "mrr": "89.90",
+            "mce": "96.88",
+            "car": "80.59",
+            "truck": "56.03",
+            "bus": "68.73",
+            "trailer": "37.32",
+            "cv": "21.87",
+            "ped": "78.33",
+            "motor": "60.22",
+            "bike": "45.35",
+            "tc": "65.34",
+            "barrier": "59.28"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "BEVFusion",
+          "reference_number": 46,
+          "care_variant": false,
+          "values": [
+            "59.92",
+            "66.51",
+            "93.08",
+            "95.90",
+            "83.84",
+            "56.44",
+            "69.17",
+            "38.39",
+            "23.83",
+            "81.08",
+            "63.68",
+            "49.07",
+            "67.86",
+            "65.78"
+          ],
+          "metrics": {
+            "map": "59.92",
+            "nds": "66.51",
+            "mrr": "93.08",
+            "mce": "95.90",
+            "car": "83.84",
+            "truck": "56.44",
+            "bus": "69.17",
+            "trailer": "38.39",
+            "cv": "23.83",
+            "ped": "81.08",
+            "motor": "63.68",
+            "bike": "49.07",
+            "tc": "67.86",
+            "barrier": "65.78"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "BEVFusion-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "63.58",
+            "68.75",
+            "97.09",
+            "89.49",
+            "86.51",
+            "60.06",
+            "71.78",
+            "40.59",
+            "26.04",
+            "85.23",
+            "68.86",
+            "54.84",
+            "73.69",
+            "68.20"
+          ],
+          "metrics": {
+            "map": "63.58",
+            "nds": "68.75",
+            "mrr": "97.09",
+            "mce": "89.49",
+            "car": "86.51",
+            "truck": "60.06",
+            "bus": "71.78",
+            "trailer": "40.59",
+            "cv": "26.04",
+            "ped": "85.23",
+            "motor": "68.86",
+            "bike": "54.84",
+            "tc": "73.69",
+            "barrier": "68.20"
+          }
+        }
+      ]
+    },
+    "8": {
+      "table_number": 8,
+      "pdf_page": 13,
+      "dataset": "KITTI-Combo",
+      "split": "validation",
+      "protocol": "Free-form composition",
+      "composition": [
+        "Fog",
+        "Echo Depletion",
+        "Occlusion"
+      ],
+      "row_headers": [
+        "Modality",
+        "Algorithm"
+      ],
+      "columns": [
+        {
+          "key": "mrr",
+          "label": "mRR",
+          "direction": "up",
+          "group": null,
+          "subheader": null
+        },
+        {
+          "key": "mce",
+          "label": "mCE",
+          "direction": "down",
+          "group": null,
+          "subheader": null
+        },
+        {
+          "key": "car_ap3d",
+          "label": "Car AP3D",
+          "direction": "up",
+          "group": "Car",
+          "subheader": "AP3D"
+        },
+        {
+          "key": "car_apbev",
+          "label": "Car APBEV",
+          "direction": "up",
+          "group": "Car",
+          "subheader": "APBEV"
+        },
+        {
+          "key": "ped_ap3d",
+          "label": "Ped. AP3D",
+          "direction": "up",
+          "group": "Ped.",
+          "subheader": "AP3D"
+        },
+        {
+          "key": "ped_apbev",
+          "label": "Ped. APBEV",
+          "direction": "up",
+          "group": "Ped.",
+          "subheader": "APBEV"
+        },
+        {
+          "key": "cyc_ap3d",
+          "label": "Cyc. AP3D",
+          "direction": "up",
+          "group": "Cyc.",
+          "subheader": "AP3D"
+        },
+        {
+          "key": "cyc_apbev",
+          "label": "Cyc. APBEV",
+          "direction": "up",
+          "group": "Cyc.",
+          "subheader": "APBEV"
+        }
+      ],
+      "rows": [
+        {
+          "modality": "Camera-based",
+          "method": "MonoTTA",
+          "reference_number": 47,
+          "care_variant": false,
+          "values": [
+            "14.12",
+            "100.00",
+            "1.73",
+            "3.98",
+            "0.66",
+            "0.89",
+            "0.03",
+            "0.03"
+          ],
+          "metrics": {
+            "mrr": "14.12",
+            "mce": "100.00",
+            "car_ap3d": "1.73",
+            "car_apbev": "3.98",
+            "ped_ap3d": "0.66",
+            "ped_apbev": "0.89",
+            "cyc_ap3d": "0.03",
+            "cyc_apbev": "0.03"
+          }
+        },
+        {
+          "modality": "Camera-based",
+          "method": "MonoFlex",
+          "reference_number": 48,
+          "care_variant": false,
+          "values": [
+            "1.73",
+            "101.49",
+            "0.27",
+            "0.45",
+            "0.14",
+            "0.21",
+            "0.0",
+            "0.0"
+          ],
+          "metrics": {
+            "mrr": "1.73",
+            "mce": "101.49",
+            "car_ap3d": "0.27",
+            "car_apbev": "0.45",
+            "ped_ap3d": "0.14",
+            "ped_apbev": "0.21",
+            "cyc_ap3d": "0.0",
+            "cyc_apbev": "0.0"
+          }
+        },
+        {
+          "modality": "Camera-based",
+          "method": "MonoFlex-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "53.24",
+            "96.23",
+            "5.43",
+            "9.10",
+            "1.21",
+            "1.34",
+            "0.34",
+            "0.35"
+          ],
+          "metrics": {
+            "mrr": "53.24",
+            "mce": "96.23",
+            "car_ap3d": "5.43",
+            "car_apbev": "9.10",
+            "ped_ap3d": "1.21",
+            "ped_apbev": "1.34",
+            "cyc_ap3d": "0.34",
+            "cyc_apbev": "0.35"
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "TED-S",
+          "reference_number": 25,
+          "care_variant": false,
+          "values": [
+            "85.21",
+            "100.00",
+            "74.98",
+            "83.23",
+            null,
+            null,
+            null,
+            null
+          ],
+          "metrics": {
+            "mrr": "85.21",
+            "mce": "100.00",
+            "car_ap3d": "74.98",
+            "car_apbev": "83.23",
+            "ped_ap3d": null,
+            "ped_apbev": null,
+            "cyc_ap3d": null,
+            "cyc_apbev": null
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "Voxel R-CNN",
+          "reference_number": 23,
+          "care_variant": false,
+          "values": [
+            "77.83",
+            "137.01",
+            "65.72",
+            "75.84",
+            null,
+            null,
+            null,
+            null
+          ],
+          "metrics": {
+            "mrr": "77.83",
+            "mce": "137.01",
+            "car_ap3d": "65.72",
+            "car_apbev": "75.84",
+            "ped_ap3d": null,
+            "ped_apbev": null,
+            "cyc_ap3d": null,
+            "cyc_apbev": null
+          }
+        },
+        {
+          "modality": "LiDAR-only",
+          "method": "Voxel R-CNN-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "94.89",
+            "91.97",
+            "76.99",
+            "84.27",
+            null,
+            null,
+            null,
+            null
+          ],
+          "metrics": {
+            "mrr": "94.89",
+            "mce": "91.97",
+            "car_ap3d": "76.99",
+            "car_apbev": "84.27",
+            "ped_ap3d": null,
+            "ped_apbev": null,
+            "cyc_ap3d": null,
+            "cyc_apbev": null
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "EPNet++",
+          "reference_number": 29,
+          "care_variant": false,
+          "values": [
+            "29.50",
+            "100.00",
+            "24.50",
+            "30.84",
+            "0.00",
+            "0.01",
+            "1.14",
+            "1.75"
+          ],
+          "metrics": {
+            "mrr": "29.50",
+            "mce": "100.00",
+            "car_ap3d": "24.50",
+            "car_apbev": "30.84",
+            "ped_ap3d": "0.00",
+            "ped_apbev": "0.01",
+            "cyc_ap3d": "1.14",
+            "cyc_apbev": "1.75"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "FocalConv",
+          "reference_number": 49,
+          "care_variant": false,
+          "values": [
+            "71.19",
+            "52.12",
+            "60.65",
+            "71.79",
+            "0.03",
+            "0.04",
+            "2.03",
+            "2.54"
+          ],
+          "metrics": {
+            "mrr": "71.19",
+            "mce": "52.12",
+            "car_ap3d": "60.65",
+            "car_apbev": "71.79",
+            "ped_ap3d": "0.03",
+            "ped_apbev": "0.04",
+            "cyc_ap3d": "2.03",
+            "cyc_apbev": "2.54"
+          }
+        },
+        {
+          "modality": "Multi-modal",
+          "method": "FocalConv-C",
+          "reference_number": null,
+          "care_variant": true,
+          "values": [
+            "93.38",
+            "37.15",
+            "71.95",
+            "80.46",
+            "5.65",
+            "7.74",
+            "14.88",
+            "16.80"
+          ],
+          "metrics": {
+            "mrr": "93.38",
+            "mce": "37.15",
+            "car_ap3d": "71.95",
+            "car_apbev": "80.46",
+            "ped_ap3d": "5.65",
+            "ped_apbev": "7.74",
+            "cyc_ap3d": "14.88",
+            "cyc_apbev": "16.80"
+          }
+        }
+      ]
+    }
+  }
+}

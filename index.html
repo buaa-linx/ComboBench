@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ComboBench: a configurable benchmark and corruption-aware expert framework for robust 3D perception under compositional sensing degradations.">
+<meta name="theme-color" content="#ffffff"><title>ComboBench: Beyond Isolated Corruptions</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles-v3.css">
+<script src="site-config.js" defer></script><script src="script-v3.js" defer></script>
+</head>
+
+<body><a class="skip-link" href="#main">Skip to content</a>
+<nav class="top-nav" aria-label="Page sections"><a class="home-link" href="#top">ComboBench</a><div><a href="#highlights">Highlights</a><a href="#abstract">Abstract</a><a href="#corruption-examples">Corruptions</a><a href="#method">CARE</a><a href="#evaluation">Results</a><a href="#video">Video</a></div></nav>
+<main id="main">
+<header class="publication-header" id="top">
+<h1><span class="project-name">ComboBench</span>: Beyond Isolated Corruptions<br class="title-break"><span class="publication-subtitle">Benchmarking 3D Robust Perception<br class="title-break"> across Compositional Adversity Space</span></h1>
+<p class="authors"><span data-author="chunmian">Chunmian Lin</span><sup>*,†</sup>, <span data-author="haobing">Haobing Pang</span><sup>*</sup>, <span data-author="lei">Lei Yang</span>, <span data-author="xu">Xu Han</span>, <span data-author="daxin">Daxin Tian</span><sup>†</sup></p>
+
+<p class="contribution-note"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding authors</p>
+<p class="venue-line" id="venue-line"><strong>Manuscript</strong><span>Venue / year to be added</span></p>
+<div class="publication-links" aria-label="Publication resources">
+<button class="resource-pill is-pending" type="button" data-resource="paper"><img class="resource-icon" src="assets/icons/paper.svg" alt="" width="20" height="20">Paper<small>soon</small></button>
+<button class="resource-pill is-pending" type="button" data-resource="code"><img class="resource-icon github-icon" src="assets/icons/github.svg" alt="" width="20" height="20">Code<small>soon</small></button>
+<button class="resource-pill is-pending" type="button" data-resource="data"><img class="resource-icon" src="assets/icons/data.svg" alt="" width="20" height="20">Data<small>soon</small></button>
+</div></header>
+<section class="teaser content-wide" aria-label="Research overview"><figure>
+<button class="figure-zoom teaser-image" type="button" data-image="assets/figures/detection-results.webp" data-caption="Figure 9: BEVFusion-CARE detections under Fog–Echo Depletion–Occlusion on nuScenes-Combo. The teaser shows a selected scene; the enlarged figure contains all examples." aria-label="Enlarge the detection teaser"><img src="assets/figures/detection-scene.webp" alt="BEVFusion-CARE predictions across six camera views and a bird's-eye-view point cloud under compositional corruption" width="2373" height="663" fetchpriority="high"><span class="zoom-label">View full figure ↗</span></button>
+<figcaption><strong>Beyond one corruption at a time.</strong> ComboBench evaluates 3D perception when heterogeneous camera–LiDAR degradations coexist, while CARE adapts to their compound effects.</figcaption></figure>
+<div class="teaser-facts"><span><b>30+</b> atomic operators</span><span><b>5</b> corruption taxonomies</span><span><b>5+</b> severity levels</span><span><b>2</b> datasets</span><span><b>18</b> detectors diagnosed</span></div></section>
+<section class="section highlights content" id="highlights" aria-labelledby="highlights-title"><h2 id="highlights-title">Highlights</h2><ol>
+<li><strong class="blue">Configurable compositional benchmark.</strong> ComboGen assembles over 30 atomic operators into physically compatible compositions, with control over selection, order, and severity.</li>
+<li><strong class="purple">Corruption-aware expert adaptation.</strong> CARE coordinates degradation-aware routing, expert modulation, and cross-modal reliability calibration.</li>
+<li><strong class="red">Systematic robustness evaluation.</strong> KITTI-Combo and nuScenes-Combo support individual-corruption diagnosis, compositional assessment, and analysis of unseen combinations.</li>
+</ol></section>
+<section class="section soft-section" id="abstract" aria-labelledby="abstract-title"><div class="content abstract-content"><h2 id="abstract-title">Abstract</h2><p>Performance under nominal sensing conditions alone offers an incomplete picture of perception robustness. Existing corruption benchmarks largely focus on isolated perturbations or a limited set of mixtures, leaving the interaction between heterogeneous degradations insufficiently characterized. We introduce <strong>ComboBench</strong>, a compositional robustness benchmark built on a configurable generation pipeline, <strong>ComboGen</strong>. The pipeline organizes over 30 atomic operators into five mechanism-grounded taxonomies and synthesizes physically compatible compositions with controlled operator order and severity. We further propose <strong>CARE</strong>, a Corruption-Aware Routing Expert framework that combines degradation-aware expert selection, corruption-responsive feature adaptation, and reliability-guided multimodal fusion. Experiments on <strong>nuScenes-Combo</strong> and <strong>KITTI-Combo</strong> diagnose the vulnerability of 18 clean-trained detectors and assess robustness under category-balanced mixtures and free-form compositions. Ablations and visualizations examine component contributions, routing behavior, and generalization to unseen combinations.</p><p class="source-note">Condensed from the manuscript. <span class="paper-pending-note">Paper coming soon</span></p></div></section>
+<section class="section content-wide" id="corruption-examples" aria-labelledby="corruption-examples-title"><h2 id="corruption-examples-title">Corrupted Images and Point Clouds</h2><p class="section-intro">Fog + Echo Depletion + Occlusion<br><span class="intro-secondary">Matched camera and LiDAR observations at increasing corruption severity.</span></p><div class="corruption-grid"><article class="corruption-example"><h3>Severity 1</h3><figure class="corruption-panel"><figcaption>Camera image</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/camera-severity-1.webp" data-caption="Severity 1: Camera image under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 1 camera image"><img src="assets/figures/camera-severity-1.webp" alt="Severity 1 camera image from the matched corruption sequence in Figure 3" width="664" height="500" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure><figure class="corruption-panel"><figcaption>LiDAR point cloud</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/lidar-severity-1.webp" data-caption="Severity 1: LiDAR point cloud under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 1 lidar point cloud"><img src="assets/figures/lidar-severity-1.webp" alt="Severity 1 lidar point cloud from the matched corruption sequence in Figure 3" width="670" height="517" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure></article><article class="corruption-example"><h3>Severity 3</h3><figure class="corruption-panel"><figcaption>Camera image</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/camera-severity-3.webp" data-caption="Severity 3: Camera image under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 3 camera image"><img src="assets/figures/camera-severity-3.webp" alt="Severity 3 camera image from the matched corruption sequence in Figure 3" width="663" height="500" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure><figure class="corruption-panel"><figcaption>LiDAR point cloud</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/lidar-severity-3.webp" data-caption="Severity 3: LiDAR point cloud under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 3 lidar point cloud"><img src="assets/figures/lidar-severity-3.webp" alt="Severity 3 lidar point cloud from the matched corruption sequence in Figure 3" width="670" height="517" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure></article><article class="corruption-example"><h3>Severity 5+</h3><figure class="corruption-panel"><figcaption>Camera image</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/camera-severity-6.webp" data-caption="Severity 5+: Camera image under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 5+ camera image"><img src="assets/figures/camera-severity-6.webp" alt="Severity 5+ camera image from the matched corruption sequence in Figure 3" width="675" height="500" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure><figure class="corruption-panel"><figcaption>LiDAR point cloud</figcaption><button class="figure-zoom corruption-zoom" type="button" data-image="assets/figures/lidar-severity-6.webp" data-caption="Severity 5+: LiDAR point cloud under Fog–Echo Depletion–Occlusion on nuScenes-Combo. Original matched example from manuscript Figure 3." aria-label="Enlarge Severity 5+ lidar point cloud"><img src="assets/figures/lidar-severity-6.webp" alt="Severity 5+ lidar point cloud from the matched corruption sequence in Figure 3" width="674" height="517" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure></article></div><p class="source-note">Original examples from Figure 3 on nuScenes-Combo. Camera images and point clouds in each column share the same severity. LiDAR panels retain the original 2× detail inset.</p></section>
+<section class="section soft-section" id="method" aria-labelledby="method-title"><div class="content-wide"><h2 id="method-title">CARE Architecture</h2><p class="section-intro"><strong>CARE</strong> selects specialist experts and calibrates modality reliability under compositional adversity.</p><figure class="research-figure"><button class="figure-zoom" type="button" data-image="assets/figures/care-framework.webp" data-caption="Figure 4: CARE combines corruption-discriminative routing, corruption-receptive expert modulation, and cross-modal reliability calibration." aria-label="Enlarge the CARE framework"><img src="assets/figures/care-framework.webp" alt="CARE architecture: input-conditioned routing, expert modulation, and reliability-guided camera–LiDAR fusion" width="2373" height="1230" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button><figcaption><strong>CARE architecture.</strong> Corruption-dependent expert selection and feature adaptation are coupled with reliability-guided fusion. <span class="figure-number">Figure 4.</span></figcaption></figure>
+<div class="method-components"><article><h3><span>①</span> Route</h3><p>Encode latent corruption signatures and identify a sparse set of specialists through Top-K routing.</p></article><article><h3><span>②</span> Adapt</h3><p>Activate and aggregate expert transformations for corruption-responsive feature refinement.</p></article><article><h3><span>③</span> Calibrate</h3><p>Estimate each modality's confidence and regulate its contribution to multimodal fusion.</p></article></div></div></section>
+<section class="section results-section" id="evaluation" aria-labelledby="evaluation-title">
+  <div class="results-content">
+    <h2 id="evaluation-title">Experimental Results</h2>
+    <p class="section-intro">Robustness assessment under free-form composition: Fog + Echo Depletion + Occlusion.</p>
+    <div class="result-table-heading"><h3>Table 7 · nuScenes-Combo</h3><p>Validation set · <span class="paper-pending-note">Paper coming soon</span></p></div>
+    <div class="table-scroll science-table-wrap" tabindex="0" role="region" aria-label="Table 7: nuScenes-Combo validation, free-form composition">
+      <table class="science-table" data-table="7">
+        <caption><strong>Table 7.</strong> Robustness assessment of heterogeneous detectors under free-form composition, e.g., fog, echo depletion and occlusion, on nuScenes-Combo val.</caption>
+        <thead>
+          <tr><th scope="col">Modality</th><th scope="col">Algorithm</th><th scope="col">mAP ↑</th><th scope="col">NDS ↑</th><th scope="col">mRR ↑</th><th scope="col">mCE ↓</th><th scope="col">Car ↑</th><th scope="col">Truck ↑</th><th scope="col">Bus ↑</th><th scope="col">Trailer ↑</th><th scope="col">C.V. ↑</th><th scope="col">Ped. ↑</th><th scope="col">Motor. ↑</th><th scope="col">Bike ↑</th><th scope="col">T.C. ↑</th><th scope="col">Barrier ↑</th></tr>
+        </thead>
+        <tbody data-modality="Camera-based">
+          <tr class="modality-start" data-method="M-BEV">
+            <th scope="rowgroup" class="modality-label" rowspan="3">Camera-based</th>
+            <th scope="row" class="method-name">M-BEV <span class="method-reference">[44]</span></th>
+            <td>18.92</td><td>26.80</td><td>54.72</td><td>100.00</td><td>29.37</td><td>17.77</td><td>15.15</td><td>9.75</td><td>4.75</td><td>23.07</td><td>15.30</td><td>12.17</td><td>32.21</td><td>29.67</td>
+          </tr>
+          <tr data-method="BEVFormer">
+            <th scope="row" class="method-name">BEVFormer <span class="method-reference">[22]</span></th>
+            <td>23.47</td><td>38.65</td><td>74.76</td><td>83.81</td><td>46.01</td><td>22.66</td><td>21.14</td><td>5.46</td><td>2.69</td><td>31.21</td><td>17.87</td><td>16.00</td><td>39.82</td><td>31.86</td>
+          </tr>
+          <tr class="care-row" data-method="BEVFormer-C">
+            <th scope="row" class="method-name">BEVFormer-C</th>
+            <td>26.39</td><td>40.46</td><td>79.38</td><td>81.34</td><td>50.58</td><td>25.43</td><td>24.05</td><td>8.64</td><td>4.23</td><td>33.98</td><td>21.37</td><td>21.50</td><td>38.80</td><td>35.37</td>
+          </tr>
+        </tbody>
+        <tbody data-modality="LiDAR-only">
+          <tr class="modality-start" data-method="CenterPoint">
+            <th scope="rowgroup" class="modality-label" rowspan="3">LiDAR-only</th>
+            <th scope="row" class="method-name">CenterPoint <span class="method-reference">[45]</span></th>
+            <td>57.45</td><td>65.54</td><td>98.11</td><td>100.00</td><td>84.46</td><td>57.54</td><td>70.24</td><td>36.66</td><td>15.59</td><td>83.17</td><td>52.16</td><td>39.94</td><td>68.14</td><td>66.58</td>
+          </tr>
+          <tr data-method="LION">
+            <th scope="row" class="method-name">LION <span class="method-reference">[27]</span></th>
+            <td>46.87</td><td>52.99</td><td>73.70</td><td>136.42</td><td>72.05</td><td>41.90</td><td>49.63</td><td>36.82</td><td>17.85</td><td>56.42</td><td>36.79</td><td>27.53</td><td>68.08</td><td>61.65</td>
+          </tr>
+          <tr class="care-row" data-method="LION-C">
+            <th scope="row" class="method-name">LION-C</th>
+            <td>56.36</td><td>60.65</td><td>99.20</td><td>114.19</td><td>80.58</td><td>55.11</td><td>66.77</td><td>41.66</td><td>24.57</td><td>67.84</td><td>53.93</td><td>42.34</td><td>69.45</td><td>61.39</td>
+          </tr>
+        </tbody>
+        <tbody data-modality="Multi-modal">
+          <tr class="modality-start" data-method="UniBEV">
+            <th scope="rowgroup" class="modality-label" rowspan="4">Multi-modal</th>
+            <th scope="row" class="method-name">UniBEV <span class="method-reference">[15]</span></th>
+            <td>58.11</td><td>65.08</td><td>95.01</td><td>100.00</td><td>83.82</td><td>55.34</td><td>66.94</td><td>38.50</td><td>18.33</td><td>79.77</td><td>61.74</td><td>47.33</td><td>67.38</td><td>61.94</td>
+          </tr>
+          <tr data-method="MoME">
+            <th scope="row" class="method-name">MoME <span class="method-reference">[16]</span></th>
+            <td>57.31</td><td>66.17</td><td>89.90</td><td>96.88</td><td>80.59</td><td>56.03</td><td>68.73</td><td>37.32</td><td>21.87</td><td>78.33</td><td>60.22</td><td>45.35</td><td>65.34</td><td>59.28</td>
+          </tr>
+          <tr data-method="BEVFusion">
+            <th scope="row" class="method-name">BEVFusion <span class="method-reference">[46]</span></th>
+            <td>59.92</td><td>66.51</td><td>93.08</td><td>95.90</td><td>83.84</td><td>56.44</td><td>69.17</td><td>38.39</td><td>23.83</td><td>81.08</td><td>63.68</td><td>49.07</td><td>67.86</td><td>65.78</td>
+          </tr>
+          <tr class="care-row" data-method="BEVFusion-C">
+            <th scope="row" class="method-name">BEVFusion-C</th>
+            <td>63.58</td><td>68.75</td><td>97.09</td><td>89.49</td><td>86.51</td><td>60.06</td><td>71.78</td><td>40.59</td><td>26.04</td><td>85.23</td><td>68.86</td><td>54.84</td><td>73.69</td><td>68.20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="result-table-heading second-table-heading"><h3>Table 8 · KITTI-Combo</h3><p>Validation set · <span class="paper-pending-note">Paper coming soon</span></p></div>
+    <div class="table-scroll science-table-wrap" tabindex="0" role="region" aria-label="Table 8: KITTI-Combo validation, free-form composition">
+      <table class="science-table" data-table="8">
+        <caption><strong>Table 8.</strong> Robustness assessment of heterogeneous detectors under free-form composition, e.g., fog, echo depletion and occlusion, on KITTI-Combo val.</caption>
+        <thead>
+          <tr><th scope="col" rowspan="2">Modality</th><th scope="col" rowspan="2">Algorithm</th><th scope="col" rowspan="2">mRR ↑</th><th scope="col" rowspan="2">mCE ↓</th><th scope="colgroup" colspan="2">Car</th><th scope="colgroup" colspan="2">Ped.</th><th scope="colgroup" colspan="2">Cyc.</th></tr>
+          <tr><th scope="col">AP<sub>3D</sub> ↑</th><th scope="col">AP<sub>BEV</sub> ↑</th><th scope="col">AP<sub>3D</sub> ↑</th><th scope="col">AP<sub>BEV</sub> ↑</th><th scope="col">AP<sub>3D</sub> ↑</th><th scope="col">AP<sub>BEV</sub> ↑</th></tr>
+        </thead>
+        <tbody data-modality="Camera-based">
+          <tr class="modality-start" data-method="MonoTTA">
+            <th scope="rowgroup" class="modality-label" rowspan="3">Camera-based</th>
+            <th scope="row" class="method-name">MonoTTA <span class="method-reference">[47]</span></th>
+            <td>14.12</td><td>100.00</td><td>1.73</td><td>3.98</td><td>0.66</td><td>0.89</td><td>0.03</td><td>0.03</td>
+          </tr>
+          <tr data-method="MonoFlex">
+            <th scope="row" class="method-name">MonoFlex <span class="method-reference">[48]</span></th>
+            <td>1.73</td><td>101.49</td><td>0.27</td><td>0.45</td><td>0.14</td><td>0.21</td><td>0.0</td><td>0.0</td>
+          </tr>
+          <tr class="care-row" data-method="MonoFlex-C">
+            <th scope="row" class="method-name">MonoFlex-C</th>
+            <td>53.24</td><td>96.23</td><td>5.43</td><td>9.10</td><td>1.21</td><td>1.34</td><td>0.34</td><td>0.35</td>
+          </tr>
+        </tbody>
+        <tbody data-modality="LiDAR-only">
+          <tr class="modality-start" data-method="TED-S">
+            <th scope="rowgroup" class="modality-label" rowspan="3">LiDAR-only</th>
+            <th scope="row" class="method-name">TED-S <span class="method-reference">[25]</span></th>
+            <td>85.21</td><td>100.00</td><td>74.98</td><td>83.23</td><td>—</td><td>—</td><td>—</td><td>—</td>
+          </tr>
+          <tr data-method="Voxel R-CNN">
+            <th scope="row" class="method-name">Voxel R-CNN <span class="method-reference">[23]</span></th>
+            <td>77.83</td><td>137.01</td><td>65.72</td><td>75.84</td><td>—</td><td>—</td><td>—</td><td>—</td>
+          </tr>
+          <tr class="care-row" data-method="Voxel R-CNN-C">
+            <th scope="row" class="method-name">Voxel R-CNN-C</th>
+            <td>94.89</td><td>91.97</td><td>76.99</td><td>84.27</td><td>—</td><td>—</td><td>—</td><td>—</td>
+          </tr>
+        </tbody>
+        <tbody data-modality="Multi-modal">
+          <tr class="modality-start" data-method="EPNet++">
+            <th scope="rowgroup" class="modality-label" rowspan="3">Multi-modal</th>
+            <th scope="row" class="method-name">EPNet++ <span class="method-reference">[29]</span></th>
+            <td>29.50</td><td>100.00</td><td>24.50</td><td>30.84</td><td>0.00</td><td>0.01</td><td>1.14</td><td>1.75</td>
+          </tr>
+          <tr data-method="FocalConv">
+            <th scope="row" class="method-name">FocalConv <span class="method-reference">[49]</span></th>
+            <td>71.19</td><td>52.12</td><td>60.65</td><td>71.79</td><td>0.03</td><td>0.04</td><td>2.03</td><td>2.54</td>
+          </tr>
+          <tr class="care-row" data-method="FocalConv-C">
+            <th scope="row" class="method-name">FocalConv-C</th>
+            <td>93.38</td><td>37.15</td><td>71.95</td><td>80.46</td><td>5.65</td><td>7.74</td><td>14.88</td><td>16.80</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Blue rows indicate CARE variants (-C). Original values are from Table 7 (PDF page 12) and Table 8 (PDF page 13), respectively. ↑ means higher is better; ↓ means lower is better. An em dash (—) denotes an unreported value.</p>
+  </div>
+</section>
+
+<section class="section content-wide ruled" id="video" aria-labelledby="video-title">
+<h2 id="video-title">Video</h2>
+<p class="section-intro">Qualitative demonstrations on nuScenes and KITTI.</p>
+<div class="dataset-videos">
+<article class="video-card"><h3>nuScenes-Combo</h3><div class="video-slot" data-video="nuscenes"><div class="video-placeholder" role="img" aria-label="Reserved video slot for nuScenes"><span class="video-slot-tag">nuScenes</span><span class="video-icon-disc"><img src="assets/icons/video.svg" alt="" width="34" height="34"></span><strong>Video coming soon</strong><span>Reserved for the nuScenes demonstration</span></div></div><p class="video-state" id="video-state-nuscenes">nuScenes video · reserved position</p></article>
+<article class="video-card"><h3>KITTI-Combo</h3><div class="video-slot" data-video="kitti"><div class="video-placeholder" role="img" aria-label="Reserved video slot for KITTI"><span class="video-slot-tag">KITTI</span><span class="video-icon-disc"><img src="assets/icons/video.svg" alt="" width="34" height="34"></span><strong>Video coming soon</strong><span>Reserved for the KITTI demonstration</span></div></div><p class="video-state" id="video-state-kitti">KITTI video · reserved position</p></article>
+</div></section>
+<section class="section citation-section content" id="citation" aria-labelledby="citation-title"><div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button type="button" id="copy-citation">Copy BibTeX</button></div><pre><code id="bibtex">@misc{combobench,
+  title  = {Beyond Isolated Corruptions: Benchmarking 3D Robust
+            Perception across Compositional Adversity Space},
+  author = {Lin, Chunmian and Pang, Haobing and Yang, Lei
+            and Han, Xu and Tian, Daxin},
+  note   = {Manuscript}
+}</code></pre><p class="source-note">Manuscript citation. Venue, year, DOI, and arXiv fields are reserved for final publication metadata.</p><span id="copy-status" class="sr-only" role="status"></span></section>
+</main>
+<footer class="site-footer"><div class="content"><p><strong>ComboBench</strong> · Beyond Isolated Corruptions</p><p class="footer-note">Architecture and experimental results are from the manuscript. Video positions are reserved for nuScenes and KITTI.</p><p><a href="#top">Back to top ↑</a></p></div></footer>
+<dialog id="image-dialog" class="image-dialog" aria-label="Enlarged paper figure"><button type="button" id="dialog-close" class="dialog-close" aria-label="Close enlarged figure">Close ×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+<dialog id="resource-dialog" class="resource-dialog" aria-labelledby="resource-dialog-title"><button type="button" id="resource-dialog-close" class="dialog-close" aria-label="Close resource notice">Close ×</button><span class="placeholder-badge">Reserved resource</span><h2 id="resource-dialog-title">Resource link pending</h2><p id="resource-dialog-message"></p><button type="button" class="notice-dismiss" id="resource-dismiss">Got it</button></dialog>
+</body></html>
