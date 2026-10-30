@@ -1,9 +1,5 @@
 # ComboBench
 
-**Beyond Isolated Corruptions: Benchmarking 3D Robust Perception across Compositional Adversity Space**
-
-Chunmian Lin, Haobing Pang, Lei Yang, Xu Han, and Daxin Tian.
-
 ComboBench studies robust 3D perception under compositional camera–LiDAR corruptions. The project page introduces the configurable ComboGen pipeline, the CARE framework, corrupted observation examples, and experimental results on nuScenes-Combo and KITTI-Combo.
 
 ## Project page
