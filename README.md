@@ -18,7 +18,7 @@ The page is a static website. Its entry point is `index.html`; all assets use re
 
 Resource links, author URLs, publication metadata, and independent video file URLs are configured in `site-config.js`. Keep unavailable URLs as `null`.
 
-The page distinguishes ComboGen (corruption generation and clean-trained robustness evaluation) from CARE (expert adaptation and robustness enhancement). Figure 5 belongs to the evaluation section; the original images of Tables 7 and 8 and Figure 9 belong to the enhancement section.
+The page presents corruption samples, the CARE architecture, experimental results with the original Figure 5 and Tables 7 and 8, and qualitative detection results.
 
 The complete numerical data from Tables 7 and 8 is also retained in `assets/data/table7-table8.json`. Figure and data provenance is recorded in `SOURCE_NOTES.md`.
 
