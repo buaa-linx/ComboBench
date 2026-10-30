@@ -13,7 +13,7 @@ ComboBench studies robust 3D perception under compositional camera–LiDAR corru
 ## Resource status
 
 - Manuscript PDF: not publicly released yet.
-- Research code and data links: coming soon.
+- Paper, research code, and data buttons are reserved until public URLs are available.
 - nuScenes and KITTI videos: reserved positions.
 
 ## Website source
@@ -22,7 +22,9 @@ The page is a static website. Its entry point is `index.html`; all assets use re
 
 Resource links, author URLs, publication metadata, and independent video file URLs are configured in `site-config.js`. Keep unavailable URLs as `null`.
 
-The complete data from manuscript Tables 7 and 8 is included in `assets/data/table7-table8.json`. Figure and data provenance is recorded in `SOURCE_NOTES.md`.
+The page distinguishes ComboGen (corruption generation and clean-trained robustness evaluation) from CARE (expert adaptation and robustness enhancement). Figure 5 belongs to the evaluation section; the original images of Tables 7 and 8 and Figure 9 belong to the enhancement section.
+
+The complete numerical data from Tables 7 and 8 is also retained in `assets/data/table7-table8.json`. Figure and data provenance is recorded in `SOURCE_NOTES.md`.
 
 ## Third-party assets
 

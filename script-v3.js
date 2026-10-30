@@ -23,7 +23,7 @@ document.querySelectorAll("[data-resource]").forEach(element => {
     element.addEventListener("click",event => {
       event.preventDefault();resourceTrigger = element;
       document.getElementById("resource-dialog-title").textContent = `${resourceNames[key]} link pending`;
-      document.getElementById("resource-dialog-message").textContent = `A public ${resourceNames[key].toLowerCase()} URL has not been added to this draft. This entry is reserved for the corresponding resource.`;
+      document.getElementById("resource-dialog-message").textContent = `The public ${resourceNames[key].toLowerCase()} link will be added here when the resource is available.`;
       resourceDialog.showModal();document.getElementById("resource-dismiss").focus();
     });
   }
@@ -32,7 +32,11 @@ document.getElementById("resource-dialog-close").addEventListener("click",()=>re
 document.getElementById("resource-dismiss").addEventListener("click",()=>resourceDialog.close());
 resourceDialog.addEventListener("close",()=>resourceTrigger?.focus());
 
-if (typeof config.venue === "string" && config.venue.trim()) document.getElementById("venue-line").textContent = config.venue.trim();
+const venueLine = document.getElementById("venue-line");
+if (venueLine && typeof config.venue === "string" && config.venue.trim()) {
+  venueLine.textContent = config.venue.trim();
+  venueLine.hidden = false;
+}
 document.querySelectorAll("[data-author]").forEach(element => {
   const url = safeUrl(config.authorUrls?.[element.dataset.author]);
   if (!url) return;
@@ -54,7 +58,7 @@ let imageTrigger;
 document.querySelectorAll(".figure-zoom").forEach(button => button.addEventListener("click",()=> {
   if (typeof imageDialog.showModal !== "function") {window.open(button.dataset.image,"_blank","noopener");return;}
   imageTrigger = button;
-  const image = document.getElementById("dialog-image");image.src = button.dataset.image;image.alt = button.querySelector("img").alt;
+  const image = document.getElementById("dialog-image");image.src = button.dataset.image;image.alt = button.querySelector("img").alt;image.classList.toggle("is-table",button.classList.contains("paper-table-zoom"));
   document.getElementById("dialog-caption").textContent = button.dataset.caption;
   imageDialog.showModal();document.getElementById("dialog-close").focus();
 }));
