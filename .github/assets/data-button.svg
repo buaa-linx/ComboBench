@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="38" viewBox="0 0 120 38" role="img" aria-label="Data">
+  <title>Data</title>
+  <rect x=".5" y=".5" width="119" height="37" rx="18.5" fill="#30343B" stroke="#454B55"/>
+  <g transform="translate(22 10) scale(.75)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+    <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+    <path d="M3 12A9 3 0 0 0 21 12"/>
+  </g>
+  <text x="48" y="24.25" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="15.5" font-weight="500">Data</text>
+</svg>
