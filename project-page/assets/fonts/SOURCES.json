@@ -1,0 +1,9 @@
+{
+  "family": "Noto Sans",
+  "weight_range": "100 900",
+  "font_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
+  "license": "SIL Open Font License 1.1",
+  "local_file": "NotoSans-variable.ttf",
+  "bytes": 2049096,
+  "original_sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+}
