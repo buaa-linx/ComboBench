@@ -4,7 +4,7 @@ ComboBench studies robust 3D perception under compositional camera–LiDAR corru
 
 ## Project page
 
-[Visit the project page](https://buaa-linx.github.io/ComboBench-pages/)
+[Visit the project page](https://buaa-linx.github.io/ComboBench/)
 
 ## Resource status
 
@@ -32,3 +32,7 @@ Typography uses locally hosted Noto Sans under the SIL Open Font License; source
 ## Acknowledgements
 
 The typography and video presentation of this project page were inspired by [Academic Project Astro Template](https://github.com/RomanHauksson/academic-project-astro-template) by Roman Hauksson.
+
+## Deployment
+
+The project page is published from this `project-page/` directory by `.github/workflows/pages.yml` in the ComboBench repository. Set Settings → Pages → Source to GitHub Actions.
