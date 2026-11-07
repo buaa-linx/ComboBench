@@ -10,8 +10,15 @@ The figures and numerical results are from the manuscript **Beyond Isolated Corr
 
 The original table images omit the numbered paragraph captions and retain every column heading, method name, value, underline, boldface, and original row highlight. Table images are lossless crops of the PDF rendering. The paper PDF itself remains excluded.
 
-Author names and contribution roles are retained; institutional affiliations and the Contact section are not displayed. The abstract is condensed for the webpage. Video positions are reserved and currently contain no videos.
+Author names and contribution roles are retained; institutional affiliations and the Contact section are not displayed. The abstract is condensed for the webpage.
 
 Icon provenance and license notices are in `assets/icons/SOURCES.md`.
 
-Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results contains four independent video positions, grouped by dataset. Videos have not been supplied. Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.
+Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results contains four independent video positions, grouped by dataset. The two nuScenes-combo videos were supplied by the project author as local files:
+
+- `assets/videos/fog_occlusion_echo.mp4`: **Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout.mp4`: **Snow-Beam Omission-Cluster Cutout**.
+
+Each video has a matching JPEG poster in `assets/videos/`. The nuScenes-combo videos are presented side by side on desktop and stacked on small screens. The two KITTI-combo video positions remain reserved, with the corresponding titles and no video files supplied yet.
+
+Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.

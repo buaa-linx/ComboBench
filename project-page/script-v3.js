@@ -50,11 +50,8 @@ document.querySelectorAll("[data-video]").forEach(slot => {
   if (!url) return;
   const video = slot.querySelector("video") || document.createElement("video");
   video.controls = true;video.playsInline = true;video.preload = "metadata";
-  video.src = url;
+  if (video.getAttribute("src") !== url) video.src = url;
   slot.replaceChildren(video);
-  const stateId = video.getAttribute("aria-describedby");
-  const state = stateId ? document.getElementById(stateId) : null;
-  if (state) state.hidden = true;
 });
 
 const imageDialog = document.getElementById("image-dialog");
