@@ -20,6 +20,8 @@
 <p align="center">
   <a href="https://github.com/buaa-linx/ComboBench"><img src=".github/assets/paper-button.svg" alt="Paper" width="120" height="38"></a>
   &nbsp;
+  <a href="https://huggingface.co/datasets/linchunmian/ComboBench"><img src=".github/assets/code-button.svg" alt="Code" width="120" height="38"></a>
+  &nbsp;
   <a href="https://buaa-linx.github.io/ComboBench/"><img src=".github/assets/project-button.svg" alt="Project" width="132" height="38"></a>
 </p>
 
