@@ -18,9 +18,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/buaa-linx/ComboBench"><img src="https://img.shields.io/badge/Paper-2F80ED?style=for-the-badge" alt="Paper"></a>
+  <a href="https://github.com/buaa-linx/ComboBench"><img src=".github/assets/paper-button.svg" alt="Paper" width="120" height="38"></a>
   &nbsp;
-  <a href="https://buaa-linx.github.io/ComboBench/"><img src="https://img.shields.io/badge/Project_Page-168B80?style=for-the-badge" alt="Project Page"></a>
+  <a href="https://buaa-linx.github.io/ComboBench/"><img src=".github/assets/project-button.svg" alt="Project" width="132" height="38"></a>
 </p>
 
 <p align="center">
