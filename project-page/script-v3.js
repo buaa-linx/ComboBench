@@ -42,17 +42,86 @@ document.querySelectorAll("[data-author]").forEach(element => {
   if (!url) return;
   const link = document.createElement("a");link.href = url;link.target = "_blank";link.rel = "noopener";link.textContent = element.textContent;element.replaceChildren(link);
 });
-document.querySelectorAll("[data-video]").forEach(slot => {
-  const key = slot.dataset.video;
-  const index = Number(slot.dataset.videoIndex || 0);
-  const urls = config.videos?.[key];
-  const url = safeUrl(Array.isArray(urls) ? urls[index] : index === 0 ? urls : null);
-  if (!url) return;
-  const video = slot.querySelector("video") || document.createElement("video");
-  video.controls = true;video.playsInline = true;video.preload = "metadata";
-  if (video.getAttribute("src") !== url) video.src = url;
-  slot.replaceChildren(video);
-});
+// One shared player; only the selected composition is loaded.
+const videoExplorer = document.querySelector("[data-video-explorer]");
+if (videoExplorer) {
+  const datasetButtons = Array.from(videoExplorer.querySelectorAll("[data-dataset]"));
+  const compositionButtons = Array.from(videoExplorer.querySelectorAll("[data-corruption-index]"));
+  const player = document.getElementById("qualitative-player");
+  const empty = document.getElementById("qualitative-empty");
+  const panel = document.getElementById("qualitative-player-panel");
+  const activeDataset = document.getElementById("active-dataset");
+  const activeTitle = document.getElementById("active-video-title");
+  const fallbackUrl = player.getAttribute("src");
+  const fallbackPoster = player.getAttribute("poster");
+  let selectedDataset = "nuscenes";
+  let selectedComposition = 0;
+
+  const renderVideo = () => {
+    const datasetButton = datasetButtons.find(button => button.dataset.dataset === selectedDataset);
+    const compositionButton = compositionButtons[selectedComposition];
+    const datasetName = datasetButton.textContent.trim();
+    const title = compositionButton.textContent.trim();
+    const urls = config.videos?.[selectedDataset];
+    const configuredUrl = Array.isArray(urls) ? urls[selectedComposition] : null;
+    const url = safeUrl(configuredUrl) || (!config.videos && selectedDataset === "nuscenes" && selectedComposition === 0 ? fallbackUrl : null);
+    const poster = safeUrl(config.videoPosters?.[selectedDataset]?.[selectedComposition]) || (!config.videoPosters && selectedDataset === "nuscenes" && selectedComposition === 0 ? fallbackPoster : null);
+
+    datasetButtons.forEach(button => {
+      const selected = button === datasetButton;
+      button.setAttribute("aria-selected", String(selected));
+      button.tabIndex = selected ? 0 : -1;
+    });
+    compositionButtons.forEach(button => button.setAttribute("aria-pressed", String(button === compositionButton)));
+    panel.setAttribute("aria-labelledby", datasetButton.id);
+    activeDataset.textContent = datasetName;
+    activeTitle.textContent = title;
+    player.setAttribute("aria-label", `${datasetName}: ${title}`);
+
+    if (player.getAttribute("src") !== url) {
+      player.pause();
+      player.removeAttribute("src");
+      player.removeAttribute("poster");
+      if (url) player.setAttribute("src", url);
+      if (url && poster) player.setAttribute("poster", poster);
+      player.load();
+    } else if (url && poster) {
+      player.setAttribute("poster", poster);
+    }
+    player.hidden = !url;
+    empty.hidden = Boolean(url);
+  };
+
+  const chooseDataset = dataset => {
+    if (selectedDataset === dataset) return;
+    selectedDataset = dataset;
+    renderVideo();
+  };
+  datasetButtons.forEach((button, index) => {
+    button.addEventListener("click", () => chooseDataset(button.dataset.dataset));
+    button.addEventListener("keydown", event => {
+      let next;
+      if (event.key === "ArrowRight") next = (index + 1) % datasetButtons.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + datasetButtons.length) % datasetButtons.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = datasetButtons.length - 1;
+      if (next === undefined) return;
+      event.preventDefault();
+      chooseDataset(datasetButtons[next].dataset.dataset);
+      datasetButtons[next].focus();
+    });
+  });
+  compositionButtons.forEach(button => button.addEventListener("click", () => {
+    const next = Number(button.dataset.corruptionIndex);
+    if (selectedComposition === next) return;
+    selectedComposition = next;
+    renderVideo();
+  }));
+  renderVideo();
+  videoExplorer.classList.add("is-enhanced");
+  videoExplorer.querySelector(".dataset-tabs").hidden = false;
+  videoExplorer.querySelector(".corruption-tabs").hidden = false;
+}
 
 const imageDialog = document.getElementById("image-dialog");
 let imageTrigger;

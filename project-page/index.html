@@ -5,8 +5,8 @@
 <meta name="description" content="ComboBench: a configurable benchmark and corruption-aware expert framework for robust 3D perception under compositional sensing degradations.">
 <meta name="theme-color" content="#ffffff"><title>Beyond Isolated Corruptions: Benchmarking 3D Robust Perception</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles-v3.css?v=9">
-<script src="site-config.js?v=15" defer></script><script src="script-v3.js?v=13" defer></script>
-<link rel="stylesheet" href="styles-v9.css?v=13"></head>
+<script src="site-config.js?v=16" defer></script><script src="script-v3.js?v=16" defer></script>
+<link rel="stylesheet" href="styles-v9.css?v=16"></head>
 
 <body><a class="skip-link" href="#main">Skip to content</a>
 <nav class="top-nav" aria-label="Page sections"><a class="home-link" href="#top">Overview</a><div><a href="#abstract">Abstract</a><a href="#highlights">Highlights</a><a href="#corruption-examples">Corruptions</a><a href="#method">CARE</a><a href="#evaluation">Results</a><a href="#visualization">Qualitative Results</a></div></nav>
@@ -40,34 +40,33 @@
   <div class="results-content"><h2 id="evaluation-title">Experimental Results</h2><div class="experiment-block" id="robustness-assessment"><div class="experiment-heading"><h3>Robustness Evaluation</h3></div><p class="experiment-intro">We evaluate 18 clean-trained detectors on nuScenes-Combo and KITTI-Combo without additional training or test-time tuning. Detection and robustness metrics are averaged over the applicable corruption types and severity levels, revealing distinct response profiles across camera-based, LiDAR-only, and multimodal detectors.</p><figure class="paper-result-image assessment-figure"><button class="figure-zoom " type="button" data-image="assets/figures/figure-5-original.webp" data-caption="Figure 5: Clean-trained robustness diagnosis on nuScenes-Combo and KITTI-Combo, averaged over applicable corruptions and severity levels." aria-label="Enlarge robustness assessment figure"><img src="assets/figures/figure-5-original.webp" alt="Figure 5: six radar plots of detection and robustness metrics for clean-trained detectors on KITTI-Combo and nuScenes-Combo" width="2610" height="1835" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure></div><div class="experiment-block" id="robustness-enhancement"><div class="experiment-heading"><h3>Robustness Enhancement</h3></div><p class="experiment-intro">CARE is integrated into representative camera-based, LiDAR-only, and multimodal detectors to evaluate robustness under compound sensing degradations. The following results compare CARE-equipped models with their corresponding baselines and representative alternatives under the joint Fog + Echo Depletion + Occlusion composition on both validation benchmarks.</p><figure class="paper-result-image paper-table" data-table="7"><button class="figure-zoom paper-table-zoom" type="button" data-image="assets/figures/table-7-original.webp" data-caption="nuScenes-Combo: original results under Fog + Echo Depletion + Occlusion." aria-label="Enlarge nuScenes-Combo result table"><img src="assets/figures/table-7-original.webp" alt="Original Table 7: nuScenes-Combo free-form corruption results comparing base and CARE-enhanced detectors" width="2610" height="765" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure><figure class="paper-result-image paper-table" data-table="8"><button class="figure-zoom paper-table-zoom" type="button" data-image="assets/figures/table-8-original.webp" data-caption="KITTI-Combo: original results under Fog + Echo Depletion + Occlusion." aria-label="Enlarge KITTI-Combo result table"><img src="assets/figures/table-8-original.webp" alt="Original Table 8: KITTI-Combo free-form corruption results comparing base and CARE-enhanced detectors" width="2610" height="765" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button></figure></div></div></section>
 
 <section class="section visualization-section soft-section" id="visualization" aria-labelledby="visualization-title"><div class="content-wide">
-    <h2 id="visualization-title">Qualitative Results</h2>
-    <section class="qualitative-dataset" id="qualitative-nuscenes" aria-labelledby="qualitative-nuscenes-title">
-      <h3 id="qualitative-nuscenes-title">nuScenes-combo</h3>
-      <div class="dataset-videos">
-      <article class="video-card" aria-labelledby="video-title-nuscenes-1">
-        <h4 id="video-title-nuscenes-1">Fog-Echo Depletion-Occlusion</h4>
-        <div class="video-slot" data-video="nuscenes" data-video-index="0"><video controls muted playsinline preload="metadata" poster="assets/videos/fog_occlusion_echo.jpg" src="assets/videos/fog_occlusion_echo.mp4" aria-label="nuScenes-combo: Fog-Echo Depletion-Occlusion"></video></div>
-      </article>
-      <article class="video-card" aria-labelledby="video-title-nuscenes-2">
-        <h4 id="video-title-nuscenes-2">Snow-Beam Omission-Cluster Cutout</h4>
-        <div class="video-slot" data-video="nuscenes" data-video-index="1"><video controls muted playsinline preload="metadata" poster="assets/videos/snow_beam_cutout.jpg" src="assets/videos/snow_beam_cutout.mp4" aria-label="nuScenes-combo: Snow-Beam Omission-Cluster Cutout"></video></div>
-      </article>
+  <h2 id="visualization-title">Qualitative Results</h2>
+  <div class="qualitative-explorer" data-video-explorer>
+    <div class="dataset-tabs" role="tablist" aria-label="Video dataset" hidden>
+      <button class="dataset-tab" type="button" role="tab" id="dataset-tab-nuscenes" data-dataset="nuscenes" aria-selected="true" aria-controls="qualitative-player-panel" tabindex="0">nuScenes-combo</button>
+      <button class="dataset-tab" type="button" role="tab" id="dataset-tab-kitti" data-dataset="kitti" aria-selected="false" aria-controls="qualitative-player-panel" tabindex="-1">KITTI-combo</button>
+    </div>
+    <div class="corruption-tabs" role="group" aria-label="Corruption composition" hidden>
+      <button class="corruption-tab" type="button" data-corruption-index="0" aria-pressed="true">Fog-Echo Depletion-Occlusion</button>
+      <button class="corruption-tab" type="button" data-corruption-index="1" aria-pressed="false">Snow-Beam Omission-Cluster Cutout</button>
+    </div>
+    <div class="qualitative-player-panel" id="qualitative-player-panel" role="tabpanel" aria-labelledby="dataset-tab-nuscenes" tabindex="0">
+      <header class="qualitative-player-heading" aria-live="polite" aria-atomic="true">
+        <p id="active-dataset">nuScenes-combo</p>
+        <h3 id="active-video-title">Fog-Echo Depletion-Occlusion</h3>
+      </header>
+      <div class="qualitative-player-shell">
+        <video id="qualitative-player" controls muted playsinline preload="metadata" poster="assets/videos/fog_occlusion_echo.jpg" src="assets/videos/fog_occlusion_echo.mp4" aria-label="nuScenes-combo: Fog-Echo Depletion-Occlusion"></video>
+        <div id="qualitative-empty" role="status" hidden>
+          <span class="reserved-play" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32"><path d="M12 8.5 24 16 12 23.5Z" fill="currentColor"/></svg></span>
+          <p>Video not available yet.</p>
+        </div>
       </div>
-    </section>
-    <section class="qualitative-dataset" id="qualitative-kitti" aria-labelledby="qualitative-kitti-title">
-      <h3 id="qualitative-kitti-title">KITTI-combo</h3>
-      <div class="dataset-videos">
-      <article class="video-card" aria-labelledby="video-title-kitti-1">
-        <h4 id="video-title-kitti-1">Fog-Echo Depletion-Occlusion</h4>
-        <div class="video-slot" data-video="kitti" data-video-index="0"><div class="video-reserved-label" role="img" aria-label="KITTI-combo: Fog-Echo Depletion-Occlusion; video not yet available"><span class="reserved-play"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M12 8.5 24 16 12 23.5Z" fill="currentColor"/></svg></span></div></div>
-      </article>
-      <article class="video-card" aria-labelledby="video-title-kitti-2">
-        <h4 id="video-title-kitti-2">Snow-Beam Omission-Cluster Cutout</h4>
-        <div class="video-slot" data-video="kitti" data-video-index="1"><div class="video-reserved-label" role="img" aria-label="KITTI-combo: Snow-Beam Omission-Cluster Cutout; video not yet available"><span class="reserved-play"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M12 8.5 24 16 12 23.5Z" fill="currentColor"/></svg></span></div></div>
-      </article>
-      </div>
-    </section>
-</div></section><section class="section citation-section content" id="citation" aria-labelledby="citation-title"><div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button type="button" id="copy-citation">Copy BibTeX</button></div><pre><code id="bibtex">@misc{combobench,
+    </div>
+    <noscript><p class="source-note">Also watch <a href="assets/videos/snow_beam_cutout.mp4">Snow-Beam Omission-Cluster Cutout on nuScenes-combo</a>.</p></noscript>
+  </div>
+</div></section>
+<section class="section citation-section content" id="citation" aria-labelledby="citation-title"><div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button type="button" id="copy-citation">Copy BibTeX</button></div><pre><code id="bibtex">@misc{combobench,
   title  = {Beyond Isolated Corruptions: Benchmarking 3D Robust
             Perception across Compositional Adversity Space},
   author = {Lin, Chunmian and Pang, Haobing and Yang, Lei

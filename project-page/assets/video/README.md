@@ -1,10 +1,10 @@
 # Qualitative videos
 
-The two nuScenes-combo videos are published in `assets/videos/`:
+Qualitative Results uses one shared player. First select nuScenes-combo or KITTI-combo, then select a corruption composition:
 
-- `fog_occlusion_echo.mp4`: Fog-Echo Depletion-Occlusion
-- `snow_beam_cutout.mp4`: Snow-Beam Omission-Cluster Cutout
+- Fog-Echo Depletion-Occlusion
+- Snow-Beam Omission-Cluster Cutout
 
-Each has a matching JPEG poster. The videos are presented side by side on desktop and stacked on small screens. The two KITTI-combo positions retain the corresponding titles and remain empty until their videos are available.
+The two nuScenes-combo files and their JPEG posters are in `assets/videos/`. Both KITTI-combo entries remain empty until videos are supplied.
 
-Configure each independent video URL in `site-config.js`; keep unavailable entries `null`.
+Configure the corresponding entries in `videos` and `videoPosters` in `site-config.js`; use `null` for unavailable media. Only the selected video is loaded, and changing selections pauses and releases the previous source. Video titles are defined by the composition buttons in `index.html`.
