@@ -1,10 +1,12 @@
 # Qualitative videos
 
-Qualitative Results uses one shared player. First select nuScenes-combo or KITTI-combo, then select a corruption composition:
+Qualitative Results uses one shared player. Select a dataset, then a corruption composition.
 
-- Fog-Echo Depletion-Occlusion
-- Snow-Beam Omission-Cluster Cutout
+| Dataset | Composition | File in `assets/videos/` |
+| --- | --- | --- |
+| nuScenes-combo | Fog-Echo Depletion-Occlusion | `fog_occlusion_echo.mp4` |
+| nuScenes-combo | Snow-Beam Omission-Cluster Cutout | `snow_beam_cutout.mp4` |
+| KITTI-combo | Fog-Echo Depletion-Occlusion | `fog_occlusion_echo_kitti.mp4` |
+| KITTI-combo | Snow-Beam Omission-Cluster Cutout | `snow_beam_cutout_kitti.mp4` |
 
-The two nuScenes-combo files and their JPEG posters are in `assets/videos/`. Both KITTI-combo entries remain empty until videos are supplied.
-
-Configure the corresponding entries in `videos` and `videoPosters` in `site-config.js`; use `null` for unavailable media. Only the selected video is loaded, and changing selections pauses and releases the previous source. Video titles are defined by the composition buttons in `index.html`.
+Configure the corresponding URLs in `videos` in `site-config.js`. Only the selected video is loaded; changing the selection pauses and releases the previous source. The player uses the video directly without separate poster images. Titles are defined by the composition buttons in `index.html`.

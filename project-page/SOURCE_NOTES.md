@@ -14,11 +14,13 @@ Author names and contribution roles are retained; institutional affiliations and
 
 Icon provenance and license notices are in `assets/icons/SOURCES.md`.
 
-Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results uses dataset and corruption-composition buttons to select among four video entries in one shared player. The two nuScenes-combo videos were supplied by the project author as local files:
+Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results uses dataset and corruption-composition buttons to select among four video entries in one shared player. The project author provides the following videos:
 
-- `assets/videos/fog_occlusion_echo.mp4`: **Fog-Echo Depletion-Occlusion**.
-- `assets/videos/snow_beam_cutout.mp4`: **Snow-Beam Omission-Cluster Cutout**.
+- `assets/videos/fog_occlusion_echo.mp4`: **nuScenes-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout.mp4`: **nuScenes-combo / Snow-Beam Omission-Cluster Cutout**.
+- `assets/videos/fog_occlusion_echo_kitti.mp4`: **KITTI-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout_kitti.mp4`: **KITTI-combo / Snow-Beam Omission-Cluster Cutout**.
 
-Each video has a matching JPEG poster in `assets/videos/`. The selected nuScenes-combo video fills one shared player at its original 4:1 aspect ratio. Changing the selection pauses the previous video. Both KITTI-combo entries remain reserved, with the corresponding titles and no video files supplied yet.
+Both datasets are available through the shared player. Changing the selection pauses the previous video. The player loads the selected MP4 directly without a separate poster image.
 
 Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.

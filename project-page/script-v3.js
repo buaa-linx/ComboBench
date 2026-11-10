@@ -53,7 +53,6 @@ if (videoExplorer) {
   const activeDataset = document.getElementById("active-dataset");
   const activeTitle = document.getElementById("active-video-title");
   const fallbackUrl = player.getAttribute("src");
-  const fallbackPoster = player.getAttribute("poster");
   let selectedDataset = "nuscenes";
   let selectedComposition = 0;
 
@@ -65,7 +64,6 @@ if (videoExplorer) {
     const urls = config.videos?.[selectedDataset];
     const configuredUrl = Array.isArray(urls) ? urls[selectedComposition] : null;
     const url = safeUrl(configuredUrl) || (!config.videos && selectedDataset === "nuscenes" && selectedComposition === 0 ? fallbackUrl : null);
-    const poster = safeUrl(config.videoPosters?.[selectedDataset]?.[selectedComposition]) || (!config.videoPosters && selectedDataset === "nuscenes" && selectedComposition === 0 ? fallbackPoster : null);
 
     datasetButtons.forEach(button => {
       const selected = button === datasetButton;
@@ -81,12 +79,8 @@ if (videoExplorer) {
     if (player.getAttribute("src") !== url) {
       player.pause();
       player.removeAttribute("src");
-      player.removeAttribute("poster");
       if (url) player.setAttribute("src", url);
-      if (url && poster) player.setAttribute("poster", poster);
       player.load();
-    } else if (url && poster) {
-      player.setAttribute("poster", poster);
     }
     player.hidden = !url;
     empty.hidden = Boolean(url);
