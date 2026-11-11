@@ -1,0 +1,26 @@
+# Scientific material and assets
+
+The figures and numerical results are from the manuscript **Beyond Isolated Corruptions: Benchmarking 3D Robust Perception across Compositional Adversity Space**. The manuscript PDF is not included in this repository.
+
+- CARE architecture: manuscript Figure 4.
+- Clean-trained robustness evaluation: original Figure 5, including all six radar plots and method legends. Metrics are averaged over applicable corruption types and severity levels.
+- Corrupted camera and LiDAR examples: matched columns from manuscript Figure 3 at Severity 1, 3, and 5+. Original LiDAR 2× detail insets are preserved. Filename index 6 denotes the 5+ level.
+- Table 7: original image from PDF page 12, nuScenes-Combo validation, free-form Fog + Echo Depletion + Occlusion composition, all 10 rows and 14 numerical columns.
+- Table 8: original image from PDF page 13, KITTI-Combo validation, the same free-form composition, all 9 rows and 8 numerical columns.
+
+The original table images omit the numbered paragraph captions and retain every column heading, method name, value, underline, boldface, and original row highlight. Table images are lossless crops of the PDF rendering. The paper PDF itself remains excluded.
+
+Author names and contribution roles are retained; institutional affiliations and the Contact section are not displayed. The abstract is condensed for the webpage.
+
+Icon provenance and license notices are in `assets/icons/SOURCES.md`.
+
+Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results uses dataset and corruption-composition buttons to select among four video entries in one shared player. The project author provides the following videos:
+
+- `assets/videos/fog_occlusion_echo.mp4`: **nuScenes-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout.mp4`: **nuScenes-combo / Snow-Beam Omission-Cluster Cutout**.
+- `assets/videos/fog_occlusion_echo_kitti.mp4`: **KITTI-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout_kitti.mp4`: **KITTI-combo / Snow-Beam Omission-Cluster Cutout**.
+
+Both datasets are available through the shared player. Changing the selection pauses the previous video. The player loads the selected MP4 directly without a separate poster image.
+
+Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.
