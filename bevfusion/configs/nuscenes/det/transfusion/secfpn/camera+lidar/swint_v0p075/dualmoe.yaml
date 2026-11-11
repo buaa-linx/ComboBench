@@ -1,0 +1,16 @@
+load_from: pretrained/bevfusion-det.pth
+max_epochs: 12
+
+data:
+  samples_per_gpu: 8
+
+model:
+  freeze_except_fuser: true
+  fuser:
+    type: DualMoEFuser
+    in_channels: [80, 256]
+    out_channels: 256
+    num_experts: 16
+    top_k: 2
+    noisy_gating: true
+    noise_std: 1.0
