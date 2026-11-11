@@ -57,27 +57,27 @@ nuScenes-Combo
 |---|---|---:|---:|---:|---:|:---:|
 | Camera-based | M-BEV | 18.92 | 26.80 | 54.72 | 100.00 | -|
 | Camera-based | BEVFormer | 23.47 | 38.65 | 74.76 | 83.81 |- |
-| Camera-based | **BEVFormer-C** | **26.39** | **40.46** | **79.38** | **81.34** | [model](MODEL_URL) |
+| Camera-based | **BEVFormer-CARE** | **26.39** | **40.46** | **79.38** | **81.34** | [model](MODEL_URL) |
 | LiDAR-only | CenterPoint | **57.45** | **65.54** | 98.11 | **100.00** | - |
 | LiDAR-only | LION | 46.87 | 52.99 | 73.70 | 136.42 | -|
-| LiDAR-only | **LION-C** | 56.36 | 60.65 | **99.20** | 114.19 | [model](MODEL_URL) |
+| LiDAR-only | **LION-CARE** | 56.36 | 60.65 | **99.20** | 114.19 | [model](MODEL_URL) |
 | Multi-modal | UniBEV | 58.11 | 65.08 | 95.01 | 100.00 | - |
 | Multi-modal | MoME | 57.31 | 66.17 | 89.90 | 96.88 | -|
 | Multi-modal | BEVFusion | 59.92 | 66.51 | 93.08 | 95.90 |- |
-| Multi-modal | **BEVFusion-C** | **63.58** | **68.75** | **97.09** | **89.49** | [model](MODEL_URL) |
+| Multi-modal | **BEVFusion-CARE** | **63.58** | **68.75** | **97.09** | **89.49** | [model](https://github.com/buaa-linx/ComboBench/releases/download/v1.0/BEVFusion-CARE-combo.pth) |
 
 KITTI-Combo
 | Modality | Algorithm | Car AP3D ↑ | mRR ↑ | mCE ↓ | Download |
 |---|---|---:|---:|---:|:---:|
 | Camera-based | MonoTTA | 1.73 | 14.12 | 100.00 | -|
 | Camera-based | MonoFlex | 0.27 | 1.73 | 101.49 | - |
-| Camera-based | **MonoFlex-C** | **5.43** | **53.24** | **96.23** | [model](MODEL_URL) |
+| Camera-based | **MonoFlex-CARE** | **5.43** | **53.24** | **96.23** | [model](MODEL_URL) |
 | LiDAR-only | TED-S | 74.98 | 85.21 | 100.00 | - |
 | LiDAR-only | Voxel R-CNN | 65.72 | 77.83 | 137.01 |-|
-| LiDAR-only | **Voxel R-CNN-C** | **76.99** | **94.89** | **91.97** | [model](MODEL_URL)  |
+| LiDAR-only | **Voxel R-CNN-CARE** | **76.99** | **94.89** | **91.97** | [model](MODEL_URL)  |
 | Multi-modal | EPNet++ | 24.50 | 29.50 | 100.00 | -|
 | Multi-modal | FocalConv | 60.65 | 71.19 | 52.12 | -|
-| Multi-modal | **FocalConv-C** | **71.95** | **93.38** | **37.15** |[model](MODEL_URL)  |
+| Multi-modal | **FocalConv-CARE** | **71.95** | **93.38** | **37.15** |[model](MODEL_URL)  |
 
 ## License
 
