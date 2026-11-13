@@ -38,7 +38,6 @@
 - [Getting Started](#getting-started)
 - [Robustness Evaluation](#robustness-evaluation)
 - [Robustness Enhancement](#robustness-enhancement)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -46,15 +45,15 @@
 
 ## Robustness Evaluation
 Robustness diagnosis across the full corruption inventory. We evaluate 18 representative 3D detectors on nuScenes-Combo and KITTI-Combo, revealing substantial performance degradation and distinct robustness profiles across different perception paradigms.
-![Framework](assets/robustness_evaluation.png)
+![Framework](assets/robustness_evaluation.jpg)
 
 
 ## Robustness Enhancement
 We report the robustness assessment results of representative 3D detectors on nuScenes-Combo and KITTI-Combo under free-form corruption compositions. The tables below summarize detection performance and robustness metrics, along with downloadable model checkpoints for reproducibility.
 
-nuScenes-Combo
+**nuScenes-Combo**
 | Modality | Algorithm | mAP ↑ | NDS ↑ | mRR ↑ | mCE ↓ | Download |
-|---|---|---:|---:|---:|---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Camera-based | M-BEV | 18.92 | 26.80 | 54.72 | 100.00 | -|
 | Camera-based | BEVFormer | 23.47 | 38.65 | 74.76 | 83.81 |- |
 | Camera-based | **BEVFormer-CARE** | **26.39** | **40.46** | **79.38** | **81.34** | [model](MODEL_URL) |
@@ -66,9 +65,9 @@ nuScenes-Combo
 | Multi-modal | BEVFusion | 59.92 | 66.51 | 93.08 | 95.90 |- |
 | Multi-modal | **BEVFusion-CARE** | **63.58** | **68.75** | **97.09** | **89.49** | [model](https://github.com/buaa-linx/ComboBench/releases/download/v1.0/BEVFusion-CARE-combo.pth) |
 
-KITTI-Combo
+**KITTI-Combo**
 | Modality | Algorithm | Car AP3D ↑ | mRR ↑ | mCE ↓ | Download |
-|---|---|---:|---:|---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 | Camera-based | MonoTTA | 1.73 | 14.12 | 100.00 | -|
 | Camera-based | MonoFlex | 0.27 | 1.73 | 101.49 | - |
 | Camera-based | **MonoFlex-CARE** | **5.43** | **53.24** | **96.23** | [model](MODEL_URL) |
@@ -78,8 +77,6 @@ KITTI-Combo
 | Multi-modal | EPNet++ | 24.50 | 29.50 | 100.00 | -|
 | Multi-modal | FocalConv | 60.65 | 71.19 | 52.12 | -|
 | Multi-modal | **FocalConv-CARE** | **71.95** | **93.38** | **37.15** |[model](MODEL_URL)  |
-
-## License
 
 ## Acknowledgements
 We sincerely thank the authors of these open-source projects and benchmarks that have contributed to this work. Their valuable contributions have greatly supported the development of ComboBench.
