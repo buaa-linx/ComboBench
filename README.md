@@ -9,9 +9,10 @@ ComboBench studies robust 3D perception under compositional camera–LiDAR corru
 ## Resource status
 
 - Paper PDF: not publicly released yet.
-- Code: [official implementation repository](https://github.com/buaa-linx/ComboBench).
-- Paper and data buttons are reserved until public URLs are available.
-- Qualitative Results: two reserved videos each for nuScenes-combo and KITTI-combo.
+- Code button: [official implementation repository](https://github.com/buaa-linx/ComboBench).
+- The Paper button currently links to the official implementation repository.
+- Data button: [ComboBench dataset on Hugging Face](https://huggingface.co/datasets/linchunmian/ComboBench).
+- Qualitative Results: one shared video player with dataset and corruption-composition selectors; two videos are available for each of nuScenes-combo and KITTI-combo.
 
 ## Website source
 
@@ -32,3 +33,9 @@ Typography uses locally hosted Noto Sans under the SIL Open Font License; source
 ## Acknowledgements
 
 The typography and video presentation of this project page were inspired by [Academic Project Astro Template](https://github.com/RomanHauksson/academic-project-astro-template) by Roman Hauksson.
+
+## Deployment
+
+This standalone repository serves the project page from the repository root. Set Settings → Pages → Source to Deploy from a branch, branch `main`, folder `/ (root)`.
+
+The four video URLs currently point to the public source repository. Run **Actions → Sync website videos → Run workflow** once to copy the MP4 files locally and change the config to local paths. Do this before making the source repository private.

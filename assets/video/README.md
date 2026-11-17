@@ -1,10 +1,14 @@
 # Qualitative videos
 
-Four MP4/WebM positions are reserved, grouped by dataset. Configure the two entries in each array in `site-config.js`:
+Qualitative Results uses one shared player. Select a dataset, then a corruption composition.
 
-- `videos.nuscenes[0]`: nuScenes-combo / Fog-Echo Depletion-Occlusion
-- `videos.nuscenes[1]`: nuScenes-combo / title to be determined
-- `videos.kitti[0]`: KITTI-combo / Fog-Echo Depletion-Occlusion
-- `videos.kitti[1]`: KITTI-combo / title to be determined
+| Dataset | Composition | File in `assets/videos/` |
+| --- | --- | --- |
+| nuScenes-combo | Fog-Echo Depletion-Occlusion | `fog_occlusion_echo.mp4` |
+| nuScenes-combo | Snow-Beam Omission-Cluster Cutout | `snow_beam_cutout.mp4` |
+| KITTI-combo | Fog-Echo Depletion-Occlusion | `fog_occlusion_echo_kitti.mp4` |
+| KITTI-combo | Snow-Beam Omission-Cluster Cutout | `snow_beam_cutout_kitti.mp4` |
 
-Keep an entry `null` until its real video is available. Placeholders are not sample videos. Each position can be filled independently. Edit the matching `h4` in `index.html` when a title is finalized.
+Configure the corresponding URLs in `videos` in `site-config.js`. Only the selected video is loaded; changing the selection pauses and releases the previous source. The player uses the video directly without separate poster images. Titles are defined by the composition buttons in `index.html`.
+
+In ComboBench-pages, use the **Sync website videos** action to copy all four MP4 files from the public source repository into `assets/videos/` before making the source private.

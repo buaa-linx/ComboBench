@@ -10,8 +10,17 @@ The figures and numerical results are from the manuscript **Beyond Isolated Corr
 
 The original table images omit the numbered paragraph captions and retain every column heading, method name, value, underline, boldface, and original row highlight. Table images are lossless crops of the PDF rendering. The paper PDF itself remains excluded.
 
-Author names and contribution roles are retained; institutional affiliations and the Contact section are not displayed. The abstract is condensed for the webpage. Video positions are reserved and currently contain no videos.
+Author names and contribution roles are retained; institutional affiliations and the Contact section are not displayed. The abstract is condensed for the webpage.
 
 Icon provenance and license notices are in `assets/icons/SOURCES.md`.
 
-Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results contains four independent video positions, grouped by dataset. Videos have not been supplied. Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.
+Corruption Samples displays only the severity sequence from Figure 3. Qualitative Results uses dataset and corruption-composition buttons to select among four video entries in one shared player. The project author provides the following videos:
+
+- `assets/videos/fog_occlusion_echo.mp4`: **nuScenes-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout.mp4`: **nuScenes-combo / Snow-Beam Omission-Cluster Cutout**.
+- `assets/videos/fog_occlusion_echo_kitti.mp4`: **KITTI-combo / Fog-Echo Depletion-Occlusion**.
+- `assets/videos/snow_beam_cutout_kitti.mp4`: **KITTI-combo / Snow-Beam Omission-Cluster Cutout**.
+
+Both datasets are available through the shared player. Changing the selection pauses the previous video. The player loads the selected MP4 directly without a separate poster image.
+
+Earlier Figure 2 and Figure 9 crops remain as unmodified source assets but are not displayed on the page. Noto Sans font provenance and license are in `assets/fonts/`.

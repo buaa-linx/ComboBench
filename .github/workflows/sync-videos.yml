@@ -1,0 +1,45 @@
+name: Sync website videos
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-videos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download the four public source videos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/videos
+          base="https://raw.githubusercontent.com/buaa-linx/ComboBench/main/project-page/assets/videos"
+          for name in fog_occlusion_echo.mp4 snow_beam_cutout.mp4 fog_occlusion_echo_kitti.mp4 snow_beam_cutout_kitti.mp4; do
+            curl --fail --location --retry 3 --output "assets/videos/$name" "$base/$name"
+            test -s "assets/videos/$name"
+          done
+      - name: Switch config to repository-local video URLs
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path("site-config.js")
+          s = p.read_text()
+          s = s.replace("https://raw.githubusercontent.com/buaa-linx/ComboBench/main/project-page/assets/videos/", "assets/videos/")
+          p.write_text(s)
+          p = Path("index.html")
+          s = p.read_text()
+          s = s.replace("https://raw.githubusercontent.com/buaa-linx/ComboBench/main/project-page/assets/videos/", "assets/videos/")
+          p.write_text(s)
+      - name: Commit synced files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/videos site-config.js index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Copy project-page videos into standalone website"
+            git push
+          fi
