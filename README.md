@@ -4,7 +4,7 @@ ComboBench studies robust 3D perception under compositional camera–LiDAR corru
 
 ## Project page
 
-[Visit the project page](https://buaa-linx.github.io/ComboBench-pages/)
+[Visit the project page](https://buaa-linx.github.io/ComboBench/)
 
 ## Resource status
 
